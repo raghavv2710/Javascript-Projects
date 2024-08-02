@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #374151;
+}
+*{
+    margin:0px;  
+}
+.main_body{
+    width: 550px;
+    height: 550px;
+    padding: 10px;
+    background: #1F2937;
+    border-radius:5px;
+    box-shadow: #6b7280 0px 54px 55px, #6b7280 0px -12px 30px, #6b7280 0px 4px 6px, #6b7280 0px 12px 13px, #6b7280 0px -3px 5px;
+}
+#topic{
+    width: 354px;
+    height: 80px;
+    padding-left:52px;
+    font-weight:800;
+    padding-top:115px;
+    font-family: Karla;
+    font-size: 40px;
+}
+#note{
+    width: 372px;
+    height: 28px;
+    padding-left:52px;
+    padding-top: 10px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    color:#D5D4D8;
+}
+#passwordButton{
+    width: 191px;
+    height: 42px;
+    margin-left:52px;
+    margin-top:51px;
+    border-radius: 6px 6px 6px 6px;
+    background-color: #10B981;
+    border: none;
+    color:#FFFFFF
+}
+hr{
+    width: 446px;
+    height: 0px;
+    margin-top: 35px;
+    margin-left: 52px;
+    border: 1px 0px 0px 0px;
+}
+.passwordsBox{
+    width:446px;
+    height:39px;
+    display: flex;
+}
+#pass1,#pass2{
+    width: 211px;
+    height: 39px;
+    margin-top: 35px;
+    margin-left: 52px;
+    border-radius: 6px 0px 0px 0px;
+    background: #273549;
+    color:#55F991;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
