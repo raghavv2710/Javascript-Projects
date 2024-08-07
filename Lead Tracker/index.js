@@ -2,7 +2,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/fireba
 import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
 
 const firebaseConfig = {
-    databaseURL : process.env.DATABASE_URL
+    apiKey: "AIzaSyAOSW5Gtj5qUJdeyEuyfZJyzBumvpk7ls0",
+    authDomain: "leads-tracker-app-b1684.firebaseapp.com",
+    databaseURL: "https://leads-tracker-app-b1684-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "leads-tracker-app-b1684",
+    storageBucket: "leads-tracker-app-b1684.appspot.com",
+    messagingSenderId: "350491755719",
+    appId: "1:350491755719:web:6cfc8a85a19d18744eeae2"
 }
 
 const app = initializeApp(firebaseConfig);
