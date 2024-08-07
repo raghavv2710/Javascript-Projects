@@ -1,35 +1,27 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"
+import { getDatabase,
+         ref,
+         push,
+         onValue } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js"
 
 const firebaseConfig = {
-    databaseURL: "https://leads-tracker-app-b1684-default-rtdb.asia-southeast1.firebasedatabase.app"
+    apiKey: "AIzaSyAOSW5Gtj5qUJdeyEuyfZJyzBumvpk7ls0",
+    authDomain: "leads-tracker-app-b1684.firebaseapp.com",
+    databaseURL: "https://leads-tracker-app-b1684-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "leads-tracker-app-b1684",
+    storageBucket: "leads-tracker-app-b1684.appspot.com",
+    messagingSenderId: "350491755719",
+    appId: "1:350491755719:web:6cfc8a85a19d18744eeae2"
 }
 
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
+const referenceInDB = ref(database, "leads")
 
-console.log(firebaseConfig.databaseURL)
-
-let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
-const tabBtn = document.getElementById("tab-btn")
-
-if (leadsFromLocalStorage) {
-    myLeads = leadsFromLocalStorage
-    render(myLeads)
-}
-
-tabBtn.addEventListener("click", function(){    
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-        myLeads.push(tabs[0].url)
-        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-        render(myLeads)
-    })
-})
 
 function render(leads) {
     let listItems = ""
@@ -45,15 +37,18 @@ function render(leads) {
     ulEl.innerHTML = listItems
 }
 
+onValue(referenceInDB, function(snapshot) {
+    const snapshotValues = snapshot.val()
+    // Challenge: Create a const called 'leads' which is an array containing the values inside of the snapshotValues object
+    const leads = [Object.values(snapshotValues)]
+    console.log(leads)
+})
+
 deleteBtn.addEventListener("dblclick", function() {
-    localStorage.clear()
-    myLeads = []
-    render(myLeads)
+    
 })
 
 inputBtn.addEventListener("click", function() {
-    myLeads.push(inputEl.value)
-    inputEl.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    render(myLeads)
+    push(referenceInDB, inputEl.value)
+    inputEl.value = "" 
 })
