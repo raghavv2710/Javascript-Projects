@@ -1,6 +1,7 @@
 {
-  "name": "leadsTracker",
-  "description": "https://v2.scrimba.com/learn-javascript-c0v/~04h",
+  "name": "leads-tracker.json",
+  "description": "Saves and manages your favorite web pages for quick access.",
+
   "scripts": {
     "start": "vite",
     "dev": "vite",
