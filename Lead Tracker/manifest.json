@@ -8,8 +8,5 @@
     },
     "permissions": [
         "tabs"
-    ],
-    "content_security_policy": {
-  "script-src": "'self' https://www.gstatic.com/firebasejs/10.12.5/"
-}
+    ]
 }
