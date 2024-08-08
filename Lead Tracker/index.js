@@ -1,12 +1,3 @@
-chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    const currentTab = tabs[0];
-    chrome.scripting.executeScript({
-      target: { tabId: currentTab.id },
-      files:   
-   ['src/firebase-app.js']
-    });
-  });
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"
 import { getDatabase,
          ref,
