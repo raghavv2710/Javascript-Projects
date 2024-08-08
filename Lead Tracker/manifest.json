@@ -8,8 +8,5 @@
     },
     "permissions": [
         "tabs"
-    ],
-    "content_security_policy": {
-        "extension_pages": "script-src 'self' 'unsafe-eval' https://maps.googleapis.com; object-src 'self'; script-src-elem 'self' 'unsafe-eval' https://maps.googleapis.com"
-      }
+    ]
 }
