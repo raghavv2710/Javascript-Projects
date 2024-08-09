@@ -10,6 +10,6 @@
         "tabs"
     ],
     "content_security_policy": {
-  "script-src": "'self' 'wasm-unsafe-eval' 'inline-speculation-rules' http://localhost:* http://127.0.0.1:* https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"
+  "script-src": "'self' 'wasm-unsafe-eval' 'inline-speculation-rules' http://localhost:* http://127.0.0.1:* https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js"
     }
 }
