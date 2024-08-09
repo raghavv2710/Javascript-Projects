@@ -8,5 +8,8 @@
     },
     "permissions": [
         "tabs"
-    ]
+    ],
+    "content_security_policy": {
+  "script-src": "'self' 'wasm-unsafe-eval' 'inline-speculation-rules' http://localhost:* http://127.0.0.1:* https://www.gstatic.com"
+    }
 }
