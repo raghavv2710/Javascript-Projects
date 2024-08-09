@@ -1,19 +1,43 @@
-# Getting Started
-Install the dependencies and run the project
+
+# Project Title
+
+Efficient Lead Management Chrome Extension
+
+
+## Documentation
+
+#### Lead Capture: A Web Extension for Lead Management (HTML, CSS, JavaScript)
+
+This project is a web extension built with HTML, CSS, and JavaScript that allows users to capture and store leads while browsing the web. It utilizes Firebase Realtime Database for efficient lead management and provides a foundation for understanding database concepts in web development deployment. 🚀🔥
+
+**Web Development Fundamentals:** Learn HTML, CSS, and JavaScript.
+
+**Client-Side Programming:** Master user interaction and data collection.
+
+**Database Integration:**
+Explore Firebase Realtime Database for data management.
+
+**Deployment:** Understand web extension deployment with Firebase.
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install firebase
 ```
-npm install
-npm start
+Initialize Firebase in your app and create a Firebase App object:
+
+```bash
+  import { initializeApp } from 'firebase/app';
+
+// TODO: Replace the following with your app's Firebase project configuration
+const firebaseConfig = {
+  //...
+};
+
+const app = initializeApp(firebaseConfig);
 ```
-
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
-
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
-
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+    
 
 Happy Coding!
